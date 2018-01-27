@@ -1,0 +1,11 @@
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\bin\Debug\netcoreapp2.0\ProiectDAW.deps.json
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\bin\Debug\netcoreapp2.0\ProiectDAW.runtimeconfig.json
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\bin\Debug\netcoreapp2.0\ProiectDAW.runtimeconfig.dev.json
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\bin\Debug\netcoreapp2.0\ProiectDAW.dll
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\bin\Debug\netcoreapp2.0\ProiectDAW.pdb
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.csproj.CoreCompileInputs.cache
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.AssemblyInfoInputs.cache
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.AssemblyInfo.cs
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.dll
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.pdb
+C:\Users\Vlad\Documents\Visual Studio 2017\Projects\ProiectDAW\ProiectDAW\obj\Debug\netcoreapp2.0\ProiectDAW.csprojResolveAssemblyReference.cache

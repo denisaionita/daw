@@ -21,8 +21,7 @@ namespace ProiectDAW.Migrations
 
             modelBuilder.Entity("ProiectDAW.Models.User", b =>
                 {
-                    b.Property<string>("UserName")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("EmailAddress");
 
                     b.Property<string>("Firstname");
 
@@ -31,11 +30,58 @@ namespace ProiectDAW.Migrations
                     b.Property<string>("Password");
 
                     b.Property<string>("Role");
+                  
+                    b.Property<string>("ProfilePicture");
 
-                    b.HasKey("UserName");
+                    b.HasKey("EmailAddress");
 
                     b.ToTable("Users");
                 });
+
+            modelBuilder.Entity("ProiectDAW.Models.GenreList", b =>
+            {
+                b.Property<string>("Id");
+
+                b.Property<string>("BookGenre");
+
+                b.Property<string>("BookId");
+
+                b.HasKey("Id");
+
+                b.ToTable("GenreLists");
+            });
+
+            modelBuilder.Entity("ProiectDAW.Models.Book", b =>
+            {
+                b.Property<string>("BookId");
+
+                b.Property<string>("Title");
+
+                b.Property<string>("Author");
+
+                b.Property<string>("Year");
+
+                b.Property<string>("Description");
+
+                b.Property<string>("ISBN");
+
+                b.HasKey("BookId");
+
+                b.ToTable("Books");
+            });
+
+            modelBuilder.Entity("ProiectDAW.Models.Wishlist", b =>
+            {
+                b.Property<string>("WishlistId");
+
+                b.Property<string>("UserEmail");
+
+                b.Property<string>("BookId");
+
+                b.HasKey("WishlistId");
+
+                b.ToTable("WishLists");
+            });
 #pragma warning restore 612, 618
         }
     }

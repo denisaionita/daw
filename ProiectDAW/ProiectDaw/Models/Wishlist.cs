@@ -8,7 +8,7 @@ namespace ProiectDAW.Models
     public class Wishlist
     {
         [Key]
-        public string WishListId { get; set; }
+        public string WishlistId { get; set; }
 
         public string UserEmail { get; set; }
         public string BookId { get; set; }

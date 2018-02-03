@@ -12,7 +12,7 @@ namespace ProiectDAW.Models
         public string Id { get; set; }
 
         public string BookGenre { get; set; }
-        public string BookISBN { get; set; }
+        public string BookId { get; set; }
 
     }
 }

@@ -10,6 +10,9 @@ namespace ProiectDAW
     public class ApplicationDBContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<GenreList> GenreLists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {

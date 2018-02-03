@@ -9,14 +9,3 @@ C:/Users/Vlad/Documents/Visual Studio 2017/Projects/ProiectDAW/ProiectDAW/obj/De
 C:/Users/Vlad/Documents/Visual Studio 2017/Projects/ProiectDAW/ProiectDAW/obj/Debug/netcoreapp2.0/ProiectDAW.dll
 C:/Users/Vlad/Documents/Visual Studio 2017/Projects/ProiectDAW/ProiectDAW/obj/Debug/netcoreapp2.0/ProiectDAW.pdb
 C:/Users/Vlad/Documents/Visual Studio 2017/Projects/ProiectDAW/ProiectDAW/obj/Debug/netcoreapp2.0/ProiectDAW.csprojResolveAssemblyReference.cache
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDAW/bin/Debug/netcoreapp2.0/ProiectDAW.deps.json
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDAW/bin/Debug/netcoreapp2.0/ProiectDAW.runtimeconfig.json
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDAW/bin/Debug/netcoreapp2.0/ProiectDAW.runtimeconfig.dev.json
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/bin/Debug/netcoreapp2.0/ProiectDAW.dll
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/bin/Debug/netcoreapp2.0/ProiectDAW.pdb
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.csprojResolveAssemblyReference.cache
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.csproj.CoreCompileInputs.cache
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.AssemblyInfoInputs.cache
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.AssemblyInfo.cs
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.dll
-/Users/dionita/Desktop/daw/ProiectDAW/ProiectDaw/obj/Debug/netcoreapp2.0/ProiectDAW.pdb

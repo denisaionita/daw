@@ -9,19 +9,33 @@ using System.Threading.Tasks;
 
 namespace ProiectDAW.Controllers
 
-{   [Authorize]
+{   //[Authorize]
     [Route("api/user")]
     public class UserController : Controller
     {
-        private BDRepo bdr = new BDRepo();
+        private BDRepo _repo = new BDRepo();
 
         [HttpGet]
         [Route("all")]
         public IActionResult GetUsers()
         {
-            var users = bdr.GetObjects<User>();
+            var users = _repo.GetObjects<User>();
 
             return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("{userEmail}")]
+        public IActionResult GetUser(string userEmail)
+        {
+            var user = _repo.GetUser(email:userEmail, checkpassword:false,password:null);
+
+            if(user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
     }
 }

@@ -2781,14 +2781,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "OpenIddict/2.0.0-rc2-0802": {
+      "OpenIddict/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.dll": {}
@@ -2797,7 +2797,7 @@
           "lib/netstandard2.0/OpenIddict.dll": {}
         }
       },
-      "OpenIddict.Core/2.0.0-rc2-0802": {
+      "OpenIddict.Core/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "CryptoHelper": "3.0.0",
@@ -2805,7 +2805,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
           "Newtonsoft.Json": "10.0.2",
-          "OpenIddict.Models": "2.0.0-rc2-0802",
+          "OpenIddict.Models": "2.0.0-rc2-0804",
           "System.Collections.Immutable": "1.4.0"
         },
         "compile": {
@@ -2815,7 +2815,7 @@
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
         }
       },
-      "OpenIddict.Models/2.0.0-rc2-0802": {
+      "OpenIddict.Models/2.0.0-rc2-0804": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
@@ -2824,12 +2824,12 @@
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
         }
       },
-      "OpenIddict.Mvc/2.0.0-rc2-0802": {
+      "OpenIddict.Mvc/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
@@ -7588,14 +7588,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "OpenIddict/2.0.0-rc2-0802": {
+      "OpenIddict/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.dll": {}
@@ -7604,7 +7604,7 @@
           "lib/netstandard2.0/OpenIddict.dll": {}
         }
       },
-      "OpenIddict.Core/2.0.0-rc2-0802": {
+      "OpenIddict.Core/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "CryptoHelper": "3.0.0",
@@ -7612,7 +7612,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
           "Newtonsoft.Json": "10.0.2",
-          "OpenIddict.Models": "2.0.0-rc2-0802",
+          "OpenIddict.Models": "2.0.0-rc2-0804",
           "System.Collections.Immutable": "1.4.0"
         },
         "compile": {
@@ -7622,7 +7622,7 @@
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
         }
       },
-      "OpenIddict.Models/2.0.0-rc2-0802": {
+      "OpenIddict.Models/2.0.0-rc2-0804": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
@@ -7631,12 +7631,12 @@
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
         }
       },
-      "OpenIddict.Mvc/2.0.0-rc2-0802": {
+      "OpenIddict.Mvc/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
@@ -12498,14 +12498,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "OpenIddict/2.0.0-rc2-0802": {
+      "OpenIddict/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.dll": {}
@@ -12514,7 +12514,7 @@
           "lib/netstandard2.0/OpenIddict.dll": {}
         }
       },
-      "OpenIddict.Core/2.0.0-rc2-0802": {
+      "OpenIddict.Core/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "CryptoHelper": "3.0.0",
@@ -12522,7 +12522,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
           "Newtonsoft.Json": "10.0.2",
-          "OpenIddict.Models": "2.0.0-rc2-0802",
+          "OpenIddict.Models": "2.0.0-rc2-0804",
           "System.Collections.Immutable": "1.4.0"
         },
         "compile": {
@@ -12532,7 +12532,7 @@
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
         }
       },
-      "OpenIddict.Models/2.0.0-rc2-0802": {
+      "OpenIddict.Models/2.0.0-rc2-0804": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
@@ -12541,12 +12541,12 @@
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
         }
       },
-      "OpenIddict.Mvc/2.0.0-rc2-0802": {
+      "OpenIddict.Mvc/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
@@ -17653,14 +17653,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "OpenIddict/2.0.0-rc2-0802": {
+      "OpenIddict/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Newtonsoft.Json.Bson": "1.0.1",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.dll": {}
@@ -17669,7 +17669,7 @@
           "lib/netstandard2.0/OpenIddict.dll": {}
         }
       },
-      "OpenIddict.Core/2.0.0-rc2-0802": {
+      "OpenIddict.Core/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "CryptoHelper": "3.0.0",
@@ -17677,7 +17677,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options": "2.0.0",
           "Newtonsoft.Json": "10.0.2",
-          "OpenIddict.Models": "2.0.0-rc2-0802",
+          "OpenIddict.Models": "2.0.0-rc2-0804",
           "System.Collections.Immutable": "1.4.0"
         },
         "compile": {
@@ -17687,7 +17687,7 @@
           "lib/netstandard2.0/OpenIddict.Core.dll": {}
         }
       },
-      "OpenIddict.Models/2.0.0-rc2-0802": {
+      "OpenIddict.Models/2.0.0-rc2-0804": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
@@ -17696,12 +17696,12 @@
           "lib/netstandard2.0/OpenIddict.Models.dll": {}
         }
       },
-      "OpenIddict.Mvc/2.0.0-rc2-0802": {
+      "OpenIddict.Mvc/2.0.0-rc2-0804": {
         "type": "package",
         "dependencies": {
           "AspNet.Security.OpenIdConnect.Server": "2.0.0-rc1-final",
           "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
-          "OpenIddict.Core": "2.0.0-rc2-0802"
+          "OpenIddict.Core": "2.0.0-rc2-0804"
         },
         "compile": {
           "lib/netstandard2.0/OpenIddict.Mvc.dll": {}
@@ -22934,47 +22934,47 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "OpenIddict/2.0.0-rc2-0802": {
-      "sha512": "Qn38euHkiCamdqxy1UNpUUXPIRsNfSKCRJCdvTMPI5iOE/8H0ZsFWwfg+hj7iW3b7fnlS7NxU1pLmYjbGO3FZg==",
+    "OpenIddict/2.0.0-rc2-0804": {
+      "sha512": "HfIcNsLVDyQm3b8fSIPq55KEh7ciheZlvUd4vrmP2IwiqeleSq+IAoT2t7TbcPwWhyyVDQWensA9DY927U9Zxg==",
       "type": "package",
-      "path": "openiddict/2.0.0-rc2-0802",
+      "path": "openiddict/2.0.0-rc2-0804",
       "files": [
         "lib/netstandard2.0/OpenIddict.dll",
         "lib/netstandard2.0/OpenIddict.xml",
-        "openiddict.2.0.0-rc2-0802.nupkg.sha512",
+        "openiddict.2.0.0-rc2-0804.nupkg.sha512",
         "openiddict.nuspec"
       ]
     },
-    "OpenIddict.Core/2.0.0-rc2-0802": {
-      "sha512": "L1AXcV2gPUX8LPAxHkJ3m6nMUBzJkxCQ/gtMbXLflSlCaBQKl2gjBj7PCWu7vfxSIzdNK+daiS4FJ7Ad7xk3kw==",
+    "OpenIddict.Core/2.0.0-rc2-0804": {
+      "sha512": "L9CMgSnuJygjIxwdDIETvNGqcz0951Sc38l5EfUUu7aijbMoL6N5fUrUGhcqcjfuOcc3BHdMc8M097PmKRbE3g==",
       "type": "package",
-      "path": "openiddict.core/2.0.0-rc2-0802",
+      "path": "openiddict.core/2.0.0-rc2-0804",
       "files": [
         "lib/netstandard2.0/OpenIddict.Core.dll",
         "lib/netstandard2.0/OpenIddict.Core.xml",
-        "openiddict.core.2.0.0-rc2-0802.nupkg.sha512",
+        "openiddict.core.2.0.0-rc2-0804.nupkg.sha512",
         "openiddict.core.nuspec"
       ]
     },
-    "OpenIddict.Models/2.0.0-rc2-0802": {
-      "sha512": "6cpCkBbxa7ZEK1ZsQmOw+SLV2C55cpEoCtJkoGJDJeULS2AGWQqcbRQQlApUq7gKCqNeWUuHH4Fxy12CF5/5uQ==",
+    "OpenIddict.Models/2.0.0-rc2-0804": {
+      "sha512": "sSvdVXT1I3OAlgQtDdaqS2lhczsoNGnAvQTqKhtwjccHzSC5vUu0R+SmlUCjGdDnxFQ2WhmuNvgubdOO5wh0aA==",
       "type": "package",
-      "path": "openiddict.models/2.0.0-rc2-0802",
+      "path": "openiddict.models/2.0.0-rc2-0804",
       "files": [
         "lib/netstandard2.0/OpenIddict.Models.dll",
         "lib/netstandard2.0/OpenIddict.Models.xml",
-        "openiddict.models.2.0.0-rc2-0802.nupkg.sha512",
+        "openiddict.models.2.0.0-rc2-0804.nupkg.sha512",
         "openiddict.models.nuspec"
       ]
     },
-    "OpenIddict.Mvc/2.0.0-rc2-0802": {
-      "sha512": "qU3yTrAxl26dLDm59QnJJ7vX387GUS8ytMRJAMX1641y9rKRusSYmjuKl+Xj31Ruf9AtsfYZAPPMhMY0b1Bh5Q==",
+    "OpenIddict.Mvc/2.0.0-rc2-0804": {
+      "sha512": "svIYU2NCyQTlUDjKIw6zKyP/ZVMwLAPMSW6frl/Y8tGOJcGK60GNsleMmJA1JwfccSM0qh01Fr9YaVDpZf/lcw==",
       "type": "package",
-      "path": "openiddict.mvc/2.0.0-rc2-0802",
+      "path": "openiddict.mvc/2.0.0-rc2-0804",
       "files": [
         "lib/netstandard2.0/OpenIddict.Mvc.dll",
         "lib/netstandard2.0/OpenIddict.Mvc.xml",
-        "openiddict.mvc.2.0.0-rc2-0802.nupkg.sha512",
+        "openiddict.mvc.2.0.0-rc2-0804.nupkg.sha512",
         "openiddict.mvc.nuspec"
       ]
     },

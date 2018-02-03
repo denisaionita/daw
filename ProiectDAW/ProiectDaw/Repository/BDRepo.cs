@@ -10,13 +10,29 @@ namespace ProiectDAW.Repository
     {
         private ApplicationDBContext dbc = new ApplicationDBContext();
 
-        public User GetUser(string userName, string password)
+        public User GetUser(string email, bool checkpassword, string password)
         {
-            var user = dbc.Users.Where(x => x.UserName == userName && x.Password == password).ToList<User>().FirstOrDefault();
-            if (user == null)
-                return null;
+            var user = new User();
+
+            if (checkpassword)
+            {
+                user = dbc.Users.Where(x => x.EmailAddress == email && x.Password == password).ToList<User>().FirstOrDefault();
+            }
+            else
+            {
+                user = dbc.Users.Where(x => x.EmailAddress == email).ToList<User>().FirstOrDefault();
+            }
 
             return user;
+        }
+
+
+        public Wishlist GetWishlist(string email)
+        {
+            var wishlist = new Wishlist();
+
+
+            return wishlist;
         }
 
         public T PostObject<T>(T item) where T : class

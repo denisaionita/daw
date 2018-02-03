@@ -14,20 +14,19 @@ using System.Threading.Tasks;
 namespace ProiectDAW.Controllers
 {
     [Route("login")]
-    public class RegisterConroller : Controller
+    public class LoginController : Controller
     {
         private BDRepo bdr = new BDRepo();
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("user")]
+        [Route("token")]
         public IActionResult Post([FromBody]User user)
         {
             if (ModelState.IsValid)
             {
-                //This method returns user id from username and password.
-                //var userId = GetUserIdFromCredentials(loginViewModel);
-                var checkUser = bdr.GetUser(user.UserName, user.Password);
+                //This method returns user from email and password.
+                var checkUser = bdr.GetUser(email: user.EmailAddress,checkpassword: true,password: user.Password);
 
                 if (checkUser == null)
                 {
@@ -36,7 +35,7 @@ namespace ProiectDAW.Controllers
 
                 var claims = new[]
                 {
-                    new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                    new Claim(JwtRegisteredClaimNames.Sub, user.EmailAddress),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                  };
 
@@ -45,12 +44,11 @@ namespace ProiectDAW.Controllers
                     issuer: "ProiectDAW",
                     audience: "FrontendDAW",
                     claims: claims,
-                    expires: DateTime.UtcNow.AddDays(60),
+                        expires: DateTime.UtcNow.AddMinutes(60),
                     notBefore: DateTime.UtcNow,
                     signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes("89babe78-2664-4c7f-b516-8bea619af7ad")),
                             SecurityAlgorithms.HmacSha256)
                 );
-
 
                 return Ok(new JwtSecurityTokenHandler().WriteToken(token));
             }

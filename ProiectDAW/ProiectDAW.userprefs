@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{4539F2E2-E46A-48A4-A366-A457C61939C1}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="ProiectDAW Status">
     <Files>
-      <File FileName="ProiectDaw/Models/Wishlist.cs" Line="14" Column="29" />
+      <File FileName="ProiectDaw/Models/Book.cs" Line="9" Column="22" />
+      <File FileName="ProiectDaw/ApplicationDBContext.cs" Line="11" Column="6" />
+      <File FileName="ProiectDaw/Migrations/ApplicationDBContextModelSnapshot.cs" Line="83" Column="36" />
+      <File FileName="ProiectDaw/Models/Wishlist.cs" Line="18" Column="1" />
       <File FileName="ProiectDAW Status" />
     </Files>
     <Pads>

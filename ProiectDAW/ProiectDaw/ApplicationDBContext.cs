@@ -16,7 +16,7 @@ namespace ProiectDAW
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("server=tcp:denisa-daw.database.windows.net;database=denisa;user=denisa;password=ionitaDen1!");
+            builder.UseSqlServer("server=tcp:denisa.database.windows.net;database=denisa;user=denisa;password=Parola123!");
         }
     }
 }

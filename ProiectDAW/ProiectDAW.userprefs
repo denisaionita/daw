@@ -1,10 +1,19 @@
 ﻿<Properties StartupConfiguration="{4539F2E2-E46A-48A4-A366-A457C61939C1}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="ProiectDAW Status">
     <Files>
-      <File FileName="ProiectDaw/Models/Book.cs" Line="9" Column="22" />
-      <File FileName="ProiectDaw/ApplicationDBContext.cs" Line="11" Column="6" />
-      <File FileName="ProiectDaw/Migrations/ApplicationDBContextModelSnapshot.cs" Line="83" Column="36" />
+      <File FileName="ProiectDaw/Models/Book.cs" Line="18" Column="45" />
+      <File FileName="ProiectDaw/ApplicationDBContext.cs" Line="13" Column="47" />
+      <File FileName="ProiectDaw/Migrations/ApplicationDBContextModelSnapshot.cs" Line="66" Column="12" />
       <File FileName="ProiectDaw/Models/Wishlist.cs" Line="18" Column="1" />
+      <File FileName="ProiectDaw/Startup.cs" Line="59" Column="54" />
+      <File FileName="ProiectDaw/wwwroot/js/Home/home.html" Line="4" Column="10" />
+      <File FileName="ProiectDaw/appsettings.json" Line="1" Column="1" />
+      <File FileName="ProiectDaw/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="ProiectDaw/bundleconfig.json" Line="1" Column="1" />
+      <File FileName="ProiectDaw/Program.cs" Line="1" Column="1" />
+      <File FileName="ProiectDaw/wwwroot/js/site.js" Line="17" Column="7" />
+      <File FileName="ProiectDaw/wwwroot/index.html" Line="11" Column="41" />
+      <File FileName="ProiectDaw/wwwroot/js/Home/home.js" Line="1" Column="1" />
       <File FileName="ProiectDAW Status" />
     </Files>
     <Pads>
@@ -12,8 +21,17 @@
         <State name="__root__">
           <Node name="ProiectDAW" expanded="True" selected="True">
             <Node name="ProiectDAW" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="FrontendModels" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True">
+                  <Node name="Home" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>

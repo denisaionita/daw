@@ -64,6 +64,7 @@ namespace ProiectDAW.Migrations
                 b.Property<string>("Description");
 
                 b.Property<string>("ISBN");
+                b.Property<string>("Language");
 
                 b.HasKey("BookId");
 

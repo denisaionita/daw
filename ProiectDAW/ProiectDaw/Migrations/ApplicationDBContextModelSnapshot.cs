@@ -80,7 +80,7 @@ namespace ProiectDAW.Migrations
 
                 b.HasKey("WishlistId");
 
-                b.ToTable("WishLists");
+                b.ToTable("Wishlists");
             });
 #pragma warning restore 612, 618
         }

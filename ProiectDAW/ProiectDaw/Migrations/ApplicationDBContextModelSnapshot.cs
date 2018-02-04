@@ -19,9 +19,46 @@ namespace ProiectDAW.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ProiectDAW.Models.Book", b =>
+                {
+                    b.Property<string>("BookId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Author");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("ISBN");
+
+                    b.Property<string>("Language");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("Year");
+
+                    b.HasKey("BookId");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("ProiectDAW.Models.GenreList", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BookGenre");
+
+                    b.Property<string>("BookId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GenreLists");
+                });
+
             modelBuilder.Entity("ProiectDAW.Models.User", b =>
                 {
-                    b.Property<string>("EmailAddress");
+                    b.Property<string>("EmailAddress")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Firstname");
 
@@ -29,60 +66,28 @@ namespace ProiectDAW.Migrations
 
                     b.Property<string>("Password");
 
-                    b.Property<string>("Role");
-                  
                     b.Property<string>("ProfilePicture");
+
+                    b.Property<string>("Role");
 
                     b.HasKey("EmailAddress");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ProiectDAW.Models.GenreList", b =>
-            {
-                b.Property<string>("Id");
-
-                b.Property<string>("BookGenre");
-
-                b.Property<string>("BookId");
-
-                b.HasKey("Id");
-
-                b.ToTable("GenreLists");
-            });
-
-            modelBuilder.Entity("ProiectDAW.Models.Book", b =>
-            {
-                b.Property<string>("BookId");
-
-                b.Property<string>("Title");
-
-                b.Property<string>("Author");
-
-                b.Property<string>("Year");
-
-                b.Property<string>("Description");
-
-                b.Property<string>("ISBN");
-                b.Property<string>("Language");
-
-                b.HasKey("BookId");
-
-                b.ToTable("Books");
-            });
-
             modelBuilder.Entity("ProiectDAW.Models.Wishlist", b =>
-            {
-                b.Property<string>("WishlistId");
+                {
+                    b.Property<string>("WishlistId")
+                        .ValueGeneratedOnAdd();
 
-                b.Property<string>("UserEmail");
+                    b.Property<string>("BookId");
 
-                b.Property<string>("BookId");
+                    b.Property<string>("UserEmail");
 
-                b.HasKey("WishlistId");
+                    b.HasKey("WishlistId");
 
-                b.ToTable("Wishlists");
-            });
+                    b.ToTable("Wishlists");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -59,24 +59,26 @@ namespace ProiectDAW.Repository
 
         public Book GetBook(string bookId)
         {
-            var books = new List<Book>();
-            if (filterByGenre)
+            try
             {
-                var bookIds = dbc.GenreLists.Where(x => x.BookGenre == genre).Select(x => x.BookId).ToList();
-                foreach (var id in bookIds)
-                {
-                    var book = dbc.Books.Where(x => x.BookId == id).ToList<Book>().FirstOrDefault();
-                    if (book != null)
-                    {
-                        books.Append(book);
-                    }
-                }
+                var book = dbc.Books.Where(x => x.BookId == bookId).ToList<Book>().FirstOrDefault();
+
+                return book;
             }
-            else
+            catch (Exception e)
             {
-                books = GetObjects<Book>();
+                return null;
             }
-            return books;
+        }
+
+        public string GenerateIdBookList()
+        {
+            var nextNumber = dbc.Books.OrderByDescending(x => Int32.Parse(x.BookId)).FirstOrDefault();
+
+            if (nextNumber == null)
+                return "1";
+
+            return (Int32.Parse(nextNumber.BookId) + 1).ToString();
         }
 
         public Wishlist GetWishlist(string email)

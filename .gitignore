@@ -24,3 +24,4 @@ ProiectDAW/.vs/ProiectDAW/v15/Server/sqlite3/db.lock
 ProiectDAW/.vs/ProiectDAW/v15/Server/sqlite3/storage.ide
 ProiectDAW/.vs/ProiectDAW/v15/Server/sqlite3/storage.ide-shm
 ProiectDAW/.vs/ProiectDAW/v15/Server/sqlite3/storage.ide-wal
+*.config

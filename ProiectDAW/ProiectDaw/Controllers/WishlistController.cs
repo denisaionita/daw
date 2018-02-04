@@ -17,7 +17,7 @@ namespace ProiectDAW.Controllers
         [Route("{userEmail}/get")]
         public IActionResult GetUser(string userEmail)
         {
-            var user = _repo.GetUser(email: userEmail, checkpassword: false, password: null);
+            var user = _repo.GetUser(username: userEmail, checkpassword: false, password: null);
 
             if (user == null)
             {

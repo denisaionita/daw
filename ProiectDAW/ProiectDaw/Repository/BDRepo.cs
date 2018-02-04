@@ -10,22 +10,74 @@ namespace ProiectDAW.Repository
     {
         private ApplicationDBContext dbc = new ApplicationDBContext();
 
-        public User GetUser(string email, bool checkpassword, string password)
+        public User GetUser(string username, bool checkpassword, string password)
         {
             var user = new User();
 
             if (checkpassword)
             {
-                user = dbc.Users.Where(x => x.EmailAddress == email && x.Password == password).ToList<User>().FirstOrDefault();
+                user = dbc.Users.Where(x => x.Username == username && x.Password == password).ToList<User>().FirstOrDefault();
             }
             else
             {
-                user = dbc.Users.Where(x => x.EmailAddress == email).ToList<User>().FirstOrDefault();
+                try
+                {
+                    user = dbc.Users.Where(x => x.Username == username).ToList<User>().FirstOrDefault();
+                }
+                catch
+                {
+                    return null;
+                }
+
             }
 
             return user;
         }
 
+
+        public List <Book> GetBooks ( bool filterByGenre, string genre)
+        {
+            var books = new List<Book>();
+            if(filterByGenre)
+            {
+                var bookIds = dbc.GenreLists.Where(x => x.BookGenre == genre).Select(x => x.BookId).ToList();
+                foreach (var id in bookIds)
+                {
+                    var book = dbc.Books.Where(x => x.BookId == id).ToList<Book>().FirstOrDefault();
+                    if (book != null)
+                    {
+                        books.Append(book);
+                    }
+                }
+            }
+            else
+            {
+                books = GetObjects<Book>();
+            }
+            return books;
+        }
+
+        public Book GetBook(string bookId)
+        {
+            var books = new List<Book>();
+            if (filterByGenre)
+            {
+                var bookIds = dbc.GenreLists.Where(x => x.BookGenre == genre).Select(x => x.BookId).ToList();
+                foreach (var id in bookIds)
+                {
+                    var book = dbc.Books.Where(x => x.BookId == id).ToList<Book>().FirstOrDefault();
+                    if (book != null)
+                    {
+                        books.Append(book);
+                    }
+                }
+            }
+            else
+            {
+                books = GetObjects<Book>();
+            }
+            return books;
+        }
 
         public Wishlist GetWishlist(string email)
         {
@@ -43,7 +95,7 @@ namespace ProiectDAW.Repository
 
                 dbc.SaveChanges();
             }
-            catch
+            catch (Exception e)
             {
                 return null;
             }
@@ -59,7 +111,7 @@ namespace ProiectDAW.Repository
 
                 dbc.SaveChanges();
             }
-            catch
+            catch (Exception e)
             {
                 return null;
             }
@@ -73,9 +125,10 @@ namespace ProiectDAW.Repository
             {
                 dbc.Remove<T>(item);
 
-                dbc.SaveChanges();
+                dbc.SaveChanges(); 
+
             }
-            catch
+            catch(Exception e)
             {
                 return null;
             }
@@ -85,9 +138,15 @@ namespace ProiectDAW.Repository
 
         public List<T> GetObjects<T>() where T : class
         {
-            var list = dbc.Set<T>().ToList<T>();
-
-            return list;
+            try
+            {
+                var list = dbc.Set<T>().ToList<T>();
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
     }
 }

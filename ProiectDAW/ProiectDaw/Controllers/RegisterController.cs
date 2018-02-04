@@ -15,11 +15,11 @@ namespace ProiectDAW.Controllers
     {
         private BDRepo _repo = new BDRepo();
 
-        [HttpGet]
-        [Route("{userEmail}")]
-        public IActionResult RegisterUser([FromBody]User user, string userEmail)
+        [HttpPost]
+        [Route("")]
+        public IActionResult RegisterUser([FromBody]User user)
         {
-            var existingUser = _repo.GetUser(email: userEmail, checkpassword: false, password: null);
+            var existingUser = _repo.GetUser(username: user.Username, checkpassword: false, password: null);
 
             if (existingUser != null)
             {

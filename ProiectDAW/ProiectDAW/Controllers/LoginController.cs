@@ -13,20 +13,20 @@ using System.Threading.Tasks;
 
 namespace ProiectDAW.Controllers
 {
-    [Route("login")]
+    [Route("api/login")]
     public class LoginController : Controller
     {
         private BDRepo bdr = new BDRepo();
 
         [AllowAnonymous]
         [HttpPost]
-        [Route("token")]
+        [Route("")]
         public IActionResult Post([FromBody]User user)
         {
             if (ModelState.IsValid)
             {
                 //This method returns user from email and password.
-                var checkUser = bdr.GetUser(email: user.EmailAddress,checkpassword: true,password: user.Password);
+                var checkUser = bdr.GetUser(username: user.Username,checkpassword: true,password: user.Password);
 
                 if (checkUser == null)
                 {
@@ -35,7 +35,7 @@ namespace ProiectDAW.Controllers
 
                 var claims = new[]
                 {
-                    new Claim(JwtRegisteredClaimNames.Sub, user.EmailAddress),
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                  };
 

@@ -13,19 +13,27 @@ namespace ProiectDAW.Controllers
         {
             private BDRepo _repo = new BDRepo();
 
-            [AllowAnonymous]
-            [HttpPost]
-            [Route("add")]
-            public IActionResult Add([FromBody] Book book)
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("add")]
+        public IActionResult Add([FromBody] Book book)
+        {
+            try
             {
-              var existingBook = _repo.get
-
+                var bookAdded = new Book();
+                bookAdded.BookId = _repo.GenerateIdBookList();
+                var result = _repo.PostObject<Book>(bookAdded);
+                return Ok(bookAdded);
+            }
+            catch
+            {
                 return BadRequest();
             }
+        }
 
         [AllowAnonymous]
         [HttpPut]
-        [Route("add")]
+        [Route("all")]
         public IActionResult Update([FromBody] Book book)
         {
 

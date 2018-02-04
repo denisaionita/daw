@@ -15,6 +15,7 @@ namespace ProiectDAW.Controllers
     {
         private BDRepo _repo = new BDRepo();
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("")]
         public IActionResult RegisterUser([FromBody]User user)

@@ -1,4 +1,4 @@
-﻿using ProiectDAW.Models;
+using ProiectDAW.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +12,7 @@ namespace ProiectDAW.Repository
 
         public User GetUser(string username, bool checkpassword, string password)
         {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
             var user = new User();
 
             if (checkpassword)
@@ -37,6 +38,8 @@ namespace ProiectDAW.Repository
 
         public List <Book> GetBooks ( bool filterByGenre, string genre)
         {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
             var books = new List<Book>();
             if(filterByGenre)
             {
@@ -59,11 +62,60 @@ namespace ProiectDAW.Repository
 
         public Book GetBook(string bookId)
         {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
             try
             {
-                var book = dbc.Books.Where(x => x.BookId == bookId).ToList<Book>().FirstOrDefault();
+                var result = dbc.Books.Where(x => x.BookId == bookId).ToList<Book>().FirstOrDefault();
+                return result;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
 
-                return book;
+        public List <GenreList> GetGenresForBook(string bookId)
+        {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
+            try
+            {
+                var result = dbc.GenreLists.Where(x => x.BookId == bookId).ToList<GenreList>();
+                return result;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public List <Wishlist> GetWishlist(string username)
+        {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
+            try
+            {
+                var wishlist = new List <Wishlist>();
+                 wishlist = dbc.Wishlists.Where(x => x.UserEmail == username).ToList<Wishlist>();
+
+                return wishlist;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public Wishlist GetWish(string username, string bookId)
+        {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
+            try
+            {
+                var wishlist = dbc.Wishlists.Where(x => x.UserEmail == username && x.BookId == bookId).ToList<Wishlist>().FirstOrDefault();
+
+                return wishlist;
             }
             catch (Exception e)
             {
@@ -73,6 +125,8 @@ namespace ProiectDAW.Repository
 
         public string GenerateIdBookList()
         {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
             var nextNumber = dbc.Books.OrderByDescending(x => Int32.Parse(x.BookId)).FirstOrDefault();
 
             if (nextNumber == null)
@@ -81,12 +135,28 @@ namespace ProiectDAW.Repository
             return (Int32.Parse(nextNumber.BookId) + 1).ToString();
         }
 
-        public Wishlist GetWishlist(string email)
+        public string GenerateIdWishList()
         {
-            var wishlist = new Wishlist();
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
 
+            var nextNumber = dbc.Wishlists.OrderByDescending(x => Int32.Parse(x.WishlistId)).FirstOrDefault();
 
-            return wishlist;
+            if (nextNumber == null)
+                return "1";
+
+            return (Int32.Parse(nextNumber.WishlistId) + 1).ToString();
+        }
+
+        public string GenerateIdGenreList()
+        {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
+            var nextNumber = dbc.GenreLists.OrderByDescending(x => Int32.Parse(x.Id)).FirstOrDefault();
+
+            if (nextNumber == null)
+                return "1";
+
+            return (Int32.Parse(nextNumber.Id) + 1).ToString();
         }
 
         public T PostObject<T>(T item) where T : class
@@ -140,6 +210,8 @@ namespace ProiectDAW.Repository
 
         public List<T> GetObjects<T>() where T : class
         {
+            dbc.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+
             try
             {
                 var list = dbc.Set<T>().ToList<T>();

@@ -6,9 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
+//using System.Web.Http.Cors;
 
 namespace ProiectDAW.Controllers
 {
+    [EnableCors("CorsPolicy")]
     //[Authorize]
     [Route("api/register")]
     public class RegisterController : Controller
@@ -24,14 +27,14 @@ namespace ProiectDAW.Controllers
 
             if (existingUser != null)
             {
-                return Unauthorized();
+                return BadRequest();
             }
             var result = _repo.PostObject<User>(user);
 
             if (result == null)
-                return BadRequest("Could not create user.");
+                return BadRequest();
 
-            return Ok("User registered");
+            return Ok("Registered");
         }
     }
 }

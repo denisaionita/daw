@@ -10,9 +10,11 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace ProiectDAW.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [Route("api/login")]
     public class LoginController : Controller
     {

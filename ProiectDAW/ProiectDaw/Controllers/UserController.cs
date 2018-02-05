@@ -7,10 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace ProiectDAW.Controllers
 
 {   //[Authorize]
+    [EnableCors("CorsPolicy")]
     [Route("api/user")]
     public class UserController : Controller
     {

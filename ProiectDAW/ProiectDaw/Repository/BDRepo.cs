@@ -49,7 +49,7 @@ namespace ProiectDAW.Repository
                     var book = dbc.Books.Where(x => x.BookId == id).ToList<Book>().FirstOrDefault();
                     if (book != null)
                     {
-                        books.Append(book);
+                        books.Add(book);
                     }
                 }
             }

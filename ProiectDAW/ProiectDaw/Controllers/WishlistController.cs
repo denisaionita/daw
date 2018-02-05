@@ -40,7 +40,7 @@ namespace ProiectDAW.Controllers
             try
             {
                 var wish = new Wishlist();
-                wish.BookId = _repo.GenerateIdWishList();
+                wish.WishlistId = _repo.GenerateIdWishList();
                 wish.UserEmail = username;
                 wish.BookId = bookId;
 

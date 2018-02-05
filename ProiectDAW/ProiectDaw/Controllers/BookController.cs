@@ -41,7 +41,7 @@ namespace ProiectDAW.Controllers
                 }
             }
 
-
+            bookContent.BookId = book.BookId;
             var result = _repo.PostObject<Book>(book);
             if (result != null)
             {
@@ -72,13 +72,11 @@ namespace ProiectDAW.Controllers
             existingBook.ISBN = book.ISBN ?? existingBook.ISBN;
             existingBook.Language = book.Language ?? existingBook.Language;
 
-            if (book.Genres.Count() != 0 && book.Genres != null)
+            if (book.Genres != null && book.Genres.Count() != 0 )
             {
                 // delete existing genres if they exist:
                 var existingGenres = _repo.GetGenresForBook(bookId);
-                if (book.Genres.Count() != 0 && book.Genres != null)
-                {
-                    foreach (var genre in existingGenres)
+                 foreach (var genre in existingGenres)
                     {
                         _repo.DeleteObject<GenreList>(genre);
                     }
@@ -89,11 +87,10 @@ namespace ProiectDAW.Controllers
                         genre.BookId = bookId;
                         _repo.PostObject<GenreList>(genre);
                     }
-                }
             }
-
+            book.BookId = bookId;
             var result = _repo.PutObject<Book>(existingBook);
-            return Ok(existingBook);
+            return Ok(book);
         }
 
         [AllowAnonymous]
@@ -139,9 +136,11 @@ namespace ProiectDAW.Controllers
                 bookContent.Year = book.Year;
                 bookContent.Description = book.Description;
                 bookContent.ISBN = book.ISBN;
+                bookContent.BookId = book.BookId;
 
                 var genres = _repo.GetGenresForBook(book.BookId);
                 bookContent.Genres = genres;
+                booksList.Add(bookContent);
             }
             return Ok(booksList);
         }
@@ -161,9 +160,12 @@ namespace ProiectDAW.Controllers
                 bookContent.Year = book.Year;
                 bookContent.Description = book.Description;
                 bookContent.ISBN = book.ISBN;
+                bookContent.BookId = book.BookId;
 
                 var genres = _repo.GetGenresForBook(book.BookId);
                 bookContent.Genres = genres;
+
+                booksList.Add(bookContent);
             }
             return Ok(booksList);
         }
